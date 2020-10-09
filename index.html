@@ -1,1 +1,695 @@
-<h1>Nishat</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishat Tasnim</title>
+	<style>
+	* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: thistle;
+  font-size: 14px;
+  color: #555555;
+  line-height: 22px;
+}
+
+a:hover{
+	color:red;
+}
+
+a:link{
+	color:hotpink;
+}
+
+a:visited{
+	color:lightgreen;
+}
+
+.checked {
+  color: red;
+}
+.not {
+  color: lightblue;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase; 
+}
+
+.semi-bold {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.resume {
+  width: 800px;
+  height: auto;
+  display: flex;
+  margin: 50px auto;
+}
+
+.resume .resume_left {
+  width: 280px;
+  background: rgb(100,0,100);
+}
+
+.resume .resume_left .resume_profile {
+  padding-top:20px;
+  padding-left:27px;
+  width: 90%;
+  height: 240px;
+}
+
+.resume .resume_left .resume_profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 60% ;
+}
+
+.resume .resume_left .resume_content {
+  padding: 0 25px;
+}
+
+.resume .title {
+  margin-bottom: 20px;
+}
+
+.resume .resume_left .bold {
+  color: fuchsia;
+}
+
+.resume .resume_left .regular {
+  color: #b1eaff;
+}
+
+.resume .resume_item {
+  padding: 25px 0;
+  border-bottom: 2px solid #b1eaff;
+}
+
+.resume .resume_left .resume_item:last-child,
+.resume .resume_right .resume_item:last-child {
+  border-bottom: 0px;
+}
+
+.resume .resume_left ul li {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.resume .resume_left ul li:last-child {
+  margin-bottom: 0;
+}
+
+.resume .resume_left ul li .icon {
+  width: 25px;
+  height: 35px;
+  background: #fff;
+  color: darkblue;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  position: relative;
+}
+
+.resume .icon i,
+.resume .resume_right .resume_hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resume .resume_left ul li .data {
+  color: #b1eaff;
+}
+
+.resume .resume_left .resume_skills ul li {
+  display: flex;
+  margin-bottom: 15px;
+  color: lightcyan;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume .resume_left .resume_skills ul li .skill_name {
+  width: 25%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress {
+  width: 60%;
+  margin: 0 5px;
+  height: 7px;
+  background: deepskyblue;
+  position: relative;
+}
+
+.resume .resume_left .resume_skills ul li .skill_per {
+  width: 10%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: greenyellow;
+}
+
+.resume .resume_left .resume_social .semi-bold {
+  color: wheat;
+  margin-bottom: 3px;
+}
+
+.resume .resume_right {
+  width: 520px;
+  background: snow;
+  padding: 25px;
+}
+
+.resume .resume_right .bold {
+  color: darkblue;
+}
+
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+.resume .resume_right ul li{
+ list-style-type: square;
+}
+
+
+.resume .resume_right ul li .date {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.resume .resume_right ul li .info {
+  margin-bottom: 20px;
+}
+
+.resume .resume_right ul li:last-child .info {
+  margin-bottom: 0;
+}
+
+.resume .resume_right .resume_work ul li:before,
+.resume .resume_right .resume_education ul li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -25px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid darkblue;
+}
+
+
+.resume .resume_right .resume_work ul li:after,
+.resume .resume_right .resume_education ul li:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -21px;
+  width: 2px;
+  height: 150px;
+  background: darkblue;
+}
+
+.resume .resume_right .resume_hobby ul {
+	
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume .resume_right .resume_hobby ul li {
+  width: 45px;
+  height: 45px;
+  border: hidden;
+  border-radius: 0%;
+  position: relative;
+  list-style-type:none;
+  color:darkblue;
+}
+
+.resume .resume_right .resume_hobby ul li i {
+  font-size: 30px;
+}
+
+.resume .resume_right .resume_hobby ul li:last-child:before {
+  display: none;
+}
+
+	</style>
+   
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	
+</head>
+<body>
+    <div class="resume">
+        <div class="resume_left">
+            <div class="resume_profile">
+                <img src="https://i.imgur.com/Dkm6wpV.jpg">
+            </div>
+            <div class="resume_content">
+                <div class="resume_item resume_info">
+                     <div class="title">
+                        <p class="bold">Nishat Tasnim</p>
+                        <p class="regular">Student</p>
+                      </div>
+                      <ul>
+                        <li>
+                          <div class="icon">
+                            <i class="fas fa-map-signs"></i>
+                          </div>
+                          <div class="data">
+                            Kalairkandi, Goalmari, Daudkandi <br /> Cumilla, Bangladesh
+                          </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                              <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="data">
+                              +8801708378125
+                            </div>
+                          </li>
+                          <li>
+                            <div class="icon">
+                              <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="data">
+                              nishat.stu2017@juniv.edu
+                            </div>
+                          </li>
+                      </ul>
+
+                </div>
+                <div class="resume_item resume_skills">
+
+                    <div class="title">
+                        <p class="bold">SKILL's</p>
+                      </div>
+                      <ul>
+                        <li>
+                          <div class="skill_name">
+                            C
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 90%;"></span>
+                          </div>
+                          <div class="skill_per">90%</div>
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                            C++
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 90%;"></span>
+                          </div>
+                          <div class="skill_per">90%</div>
+                        </li>
+						<li>
+                          <div class="skill_name">
+                            JAVA
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 90%;"></span>
+                          </div>
+                          <div class="skill_per">90%</div>
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                            Python
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 70%;"></span>
+                          </div>
+                          <div class="skill_per">70%</div>
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                            HTML
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 90%;"></span>
+                          </div>
+                          <div class="skill_per">90%</div>
+                        </li>
+                        <li>
+                            <div class="skill_name">
+                              CSS
+                            </div>
+                            <div class="skill_progress">
+                              <span style="width: 75%;"></span>
+                            </div>
+                            <div class="skill_per">75%</div>
+                          </li>
+						  <li>
+                          <div class="skill_name">
+                            PHP
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 40%;"></span>
+                          </div>
+                          <div class="skill_per">40%</div>
+                        </li>
+						  <li>
+                          <div class="skill_name">
+                            JavaScript
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 40%;"></span>
+                          </div>
+                          <div class="skill_per">40%</div>
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                            EXCEL
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 90%;"></span>
+                          </div>
+                          <div class="skill_per">90%</div>
+                        </li>
+						<li>
+                          <div class="skill_name">
+                            PowerPoint
+                          </div>
+                          <div class="skill_progress">
+                            <span style="width: 90%;"></span>
+                          </div>
+                          <div class="skill_per">90%</div>
+                        </li>
+                      </ul> 
+
+                </div>
+				
+				<div class="resume_item resume_skills">
+
+                    <div class="title">
+                        <p class="bold">LANGUAGES</p>
+                      </div>
+                      <ul>
+                        <li>
+                          <div class="skill_name">
+                            BENGALI
+                          </div>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+						  <span class="fa fa-star checked"></span>
+						  <span class="fa fa-star checked"></span>
+                       
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                            ENGLISH
+                          </div>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+						  <span class="fa fa-star checked"></span>
+						  <span class="fa fa-star not "></span>
+                       
+                        </li>
+						<li>
+                          <div class="skill_name">
+                            GERMAN
+                          </div>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star not"></span>
+						  <span class="fa fa-star not"></span>
+						  <span class="fa fa-star not"></span>
+                       
+                        </li>
+                        <li>
+                          <div class="skill_name">
+                            HINDI
+                          </div>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+						  <span class="fa fa-star checked"></span>
+						  <span class="fa fa-star not"></span>
+                       
+                        </li>
+                        
+						
+                      </ul> 
+
+                </div>
+				
+                <div class="resume_item resume_social">
+                    <div class="title">
+                        <p class="bold">Social</p>
+                      </div>
+                      <ul>
+                        <li>
+                          <div class="icon">
+                            <i class="fab fa-linkedin-square"></i>
+                          </div>
+                          <div class="data">
+						    <p class="semi-bold">LinkedIn</p>
+						    <a href="https://www.linkedin.com/in/nishat-tasnim-a334181b4">Nishat Tasnim</a>
+                          </div>
+                        </li>
+                        
+                        <li>
+                          <div class="icon">
+                            <i class="fab fa-twitter-square"></i>
+                          </div>
+                          <div class="data">
+                            <p class="semi-bold">Twitter</p>
+                            <a href="https://www.twitter.com/NishatT69726126">NishatT69726126</a>
+                          </div>
+                        </li>
+						
+						<li>
+                          <div class="icon">
+                            <i class="fab fa-facebook-square"></i>
+                          </div>
+                          <div class="data">
+                            <p class="semi-bold">Facebook</p>
+                            <a href="https://www.facebook.com/profile.php?id=100029717959166">নিশাত তাসনিম</a>
+                          </div>
+                        </li>
+                        
+						<li>
+                          <div class="icon">
+                            <i class="fab fa-instagram-square"></i>
+                          </div>
+                          <div class="data">
+                            <p class="semi-bold">Instagram</p>
+                             <a href="instagram.com/__nishat__tasnim__">__nishat__tasnim__</a>
+                          </div>
+                        </li>
+                        
+                      </ul>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="resume_right">
+            <div class="resume_item resume_about">
+                <div class="title">
+                   <p class="bold">PROFILE</p>
+                 </div>
+                <p style="font-size: medium;text-align: justify;">Highly organized and detail-oriented person. Responsible & ambitious student with excellent time management. Enough energetic to learn new skills and use creative approach to solve problems. Served as a peer tutor for courses such as basic HTML, SQL, Networking and English Grammar.Posses
+                    proven communication skills & strong work ethic that will aid your company in meeting its milestones.
+                </p>
+            </div>
+            <div class="resume_item resume_education">
+                <div class="title">
+                     <p class="bold">Education</p>
+                   </div>
+                <ul style="list-style-type: disc">
+                      <li>
+                          <div class="date">2018-Present</div> 
+                          <div class="info">
+                               <p class="semi-bold">B.Sc in Computer Science & Engineering</p> 
+                            <p>Jahangirnagar University, Savar, Dhaka, Bangladesh</p>
+                          </div>
+                      </li>
+                      <li>
+                        <div class="date"> 2017</div>
+                        <div class="info">
+                               <p class="semi-bold"> HSC (G.P.A- 5.00)</p> 
+                               <p>Holy Cross College, Dhaka, Bangladesh</p>
+                          </div>
+                      </li>
+                      <li>
+                        <div class="date"> 2015</div>
+                        <div class="info">
+                               <p class="semi-bold"> SSC (G.P.A- 5.00)</p>
+                               <p>Mollakandi Lalmia pilot High School and College,Daudkandi,Cumilla,Bangladesh</p> 
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+			  
+			  <div class="resume_item resume_education">
+                <div class="title">
+                     <p class="bold">Independent Courses</p>
+                   </div>
+                <ul >
+                      <li>
+                          
+                          <div class="info">
+                               <p class="semi-bold">Java Crourse For Beginners</p> 
+                            <p>Udemy.com</p>
+                          </div>
+                      </li>
+					  
+                      <li>
+                          
+                          <div class="info">
+                               <p class="semi-bold">Computer Science: Programming with a Purpose</p> 
+                            <p>Coursera.org</p>
+                          </div>
+                      </li>
+                      
+                  </ul>
+              </div>
+			  
+            <div class="resume_item resume_work">
+                <div class="title">
+                   <p class="bold">Work Experience</p>
+                 </div>
+                <ul>
+				<li>
+                        <div class="date">2011-2013</div> 
+                        <div class="info">
+                             <p class="semi-bold" style="color: darkblue;"><b>Executive Member</b></p> 
+                          <p>MPHC Science Club</p>
+                          
+                        </div>
+                    </li>
+					<li>
+                        <div class="date">2013-2014</div> 
+                        <div class="info">
+                             <p class="semi-bold" style="color: darkblue;"><b>Vice President</b></p> 
+                          <p>MPHC Science Club</p>
+                          
+                        </div>
+                    </li>
+				    <li>
+                        <div class="date">2014-2015</div> 
+                        <div class="info">
+                             <p class="semi-bold" style="color: darkblue;"><b>President</b></p> 
+                          <p>MPHC Science Club</p>
+                          
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">2015-2016</div> 
+                        <div class="info">
+                             <p class="semi-bold" style="color: darkblue;"><b>Club Member</b></p> 
+                          <p>HCC Chess Club</p>
+                          
+                        </div>
+                    </li>
+					<li>
+                      <div class="date">2017-Present</div>
+                      <div class="info">
+                             <p class="semi-bold"style="color: darkblue;" ><b>Executive Member</b></p> 
+                          <p>Gontobbo Youth Foundation</p>
+                        </div>
+                    </li>
+					<li>
+                      <div class="date">2018-2019</div>
+                      <div class="info">
+                             <p class="semi-bold"style="color: darkblue;" ><b>Organizational Secretary</b></p> 
+                          <p>Bandhon,BKZH,JU Chapter</p>
+                        </div>
+                    </li>
+					<li>
+                      <div class="date">2018-2019</div>
+                      <div class="info">
+                             <p class="semi-bold"style="color: darkblue;" ><b>Executive Member</b></p> 
+                          <p>Cybar Crime Awareness Foundation JU Chapter</p>
+                        </div>
+                    </li>
+                    <li>
+                      <div class="date">2018-Present</div>
+                      <div class="info">
+                             <p class="semi-bold"style="color: darkblue;" ><b>Executive Member</b></p> 
+                          <p>Jahangirnagar University IT Soceity</p>
+                        </div>
+                    </li>
+                    <li>
+                      <div class="date">2019 - Present</div>
+                      <div class="info">
+                             <p class="semi-bold" style="color: darkblue;"><b>Senior Executive member</b></p> 
+                          <p>Basis Student Forum JU chapter</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+             
+			 <div class="resume_item resume_about">
+                <div class="title">
+                   <p class="bold">Area of Interest</p>
+                 </div>
+                <p style="font-size: medium;text-align: justify;">Database System, Cybersecurity, Softwere Engineering, Machine learning, Data mining. </p>
+            </div>
+			 
+            <div class="resume_item resume_hobby">
+              <div class="title">
+                   <p class="bold">Appetency</p>
+                 </div>
+               <ul>
+                 <li><i class="fas fa-book" aria-hidden="true"></i></li>
+                 <li><i class="fas fa-gamepad" aria-hidden="true"></i></li>
+                 <li><i class="fas fa-chess" aria-hidden="true"></i></li>
+				 <li><i class="fas fa-dance" aria-hidden="true"></i></li>
+				 <li><i class="fas fa-music" aria-hidden="true"></i></li>
+                  <li><i class="fa fa-play-circle"></i></li>
+				 <li><i class="fa fa-shopping-cart"></i></li>
+              </ul>
+			  <ul>
+                 <li>Novel</li>
+                 <li>Video Game</li>
+                 <li>Chess</li>
+				 <li>Dance</li>
+				 <li>Music</li>
+				 <li>Movie</li>
+				 <li>Shopping</li>
+                 
+              </ul>
+            </div>
+			<br>
+			<div class="resume_item resume_about">
+                <p style="font-size: medium;text-align: justify;"><b>Declaration:</b> I hereby declare that the details furnished above are true and correct to the best of my knowledge and belief.
+                </p>
+            </div>
+			
+        </div>
+    </div>
+    
+</body>
+</html>
